@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Navigation from "./components/Navigation";
 import PokemonCard from "./components/PokemonCard";
 import Row from "react-bootstrap/Row";
-import { useSWR, fetcher } from "./swr";
+import useSWR from "./swr";
 
 const LIMIT = 150;
 const POKE_API = `https://pokeapi.co/api/v2/pokemon/?limit=${LIMIT}`;
@@ -19,7 +19,7 @@ function Wrapper({ children }) {
 }
 
 export default function App() {
-	const { data, error, isLoading } = useSWR(POKE_API, fetcher);
+	const { data, error, isLoading } = useSWR(POKE_API);
 
 	if (error) {
 		return (

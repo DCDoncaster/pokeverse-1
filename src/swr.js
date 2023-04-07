@@ -1,6 +1,12 @@
-export { default as useSWR } from "swr";
+import { default as swr } from "swr";
 
-export async function fetcher(...args) {
+async function fetcher(...args) {
 	const response = await fetch(...args);
 	return response.json();
 }
+
+function useSWR(url) {
+	return swr(url, fetcher);
+}
+
+export { useSWR as default, swr as useSWR, fetcher };

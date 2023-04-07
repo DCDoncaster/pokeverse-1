@@ -1,8 +1,8 @@
 import Card from "react-bootstrap/Card";
-import { useSWR, fetcher } from "../swr";
+import useSWR from "../swr";
 
 export default function PokemonCard({ name, url }) {
-	const { data, error, isLoading } = useSWR(url, fetcher);
+	const { data, error, isLoading } = useSWR(url);
 
 	if (error) {
 		return (
