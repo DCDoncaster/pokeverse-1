@@ -9,7 +9,7 @@ export default function Navigation() {
 		<Navbar sticky="top" bg="dark" variant="dark">
 			<Container>
 				<Navbar.Brand>
-					<Image src={squirtle} alt="" width="30" className="me-2" />
+					<Image src={squirtle} alt="" width="29" className="me-2" />
 					Pokéverse
 				</Navbar.Brand>
 				<Nav className="me-auto">
